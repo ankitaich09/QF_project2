@@ -1,0 +1,37 @@
+practical test for convexity
+
+iff H(x) is positive semi definite on the convex set of X
+
+necessary condition for local mini
+
+f(x*+hp) >= f(x*)
+
+optimisation with linesearch
+
+take an initial guess X0, k=0
+find a search (descent) direction p(k)
+decide on a step size h(k)
+X(k+1) = X(k) + h(k)*p(k)
+
+till X(k) is good enough
+
+meaning X(K+1) - X(K) <= pre-defined tolerance 
+
+or 
+
+I reach max number of iterations
+
+
+practice: implement backtracking 
+
+choose alpha (a) > 0, 
+
+until
+
+f(x+ap)<= f(x) + c.a.p*grad(f(x))
+
+Input: function, currentpos (x), p (search direction), gradient_function
+
+Output: alpha (Step size)
+
+c = 0.1, p=0.5, a = 1;
