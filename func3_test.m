@@ -12,7 +12,7 @@ fig1 = figure
 % makes z a grid of values with size of x
 z = reshape(f3(X), size(x));
 surf(x, y, z);
-pxy = num_gradient_func(f3, X,1);
+pxy = numerical_gradient_func(f3, X,1);
 figure
 % contour only near zero
 contour(x, y, z, 0:.01:2);
