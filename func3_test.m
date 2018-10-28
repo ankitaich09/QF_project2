@@ -1,6 +1,8 @@
 f = @func3;
 gf = @numerical_gradient_func;
 gf = analytical_gradient_func(@func3gradient);
+hf = @numerical_hessian_func;
+hf = analytical_hessian_func(@func3hessian);
 
 [x, y] = meshgrid(-2:0.1:2);
 % all points arranged as X = [x1, ..., xn] from the meshgrid
@@ -26,7 +28,10 @@ hold on
 % plane around the global minimum that it cannot reach the minimum
 % when the starting point is further from the minimum it seems to be better
 known_minimum = [1; 1];
-[errors, points] = gradient_descent_method(f, gf, [-2; -2], 10000, 0.0000000001, known_minimum)
+
+%[errors, points] = gradient_descent_method(f, gf, [-2; -2], 10000, 0.0000000001, known_minimum)
+[errors, points] = newton_method(f, gf, hf, [-2; -2], 10000, 0.0000000001, known_minimum)
+
 draw_trace(points);
 figure(fig1)
 hold on
