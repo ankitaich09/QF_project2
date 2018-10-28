@@ -26,9 +26,6 @@ hold on
 % plane around the global minimum that it cannot reach the minimum
 % when the starting point is further from the minimum it seems to be better
 known_minimum = [1; 1];
-% analytical
-% [errors, points] = gradient_descent(f3, gf3, [0; 0], 10000, 0.0000000001, known_minimum)
-% numerical
 [errors, points] = gradient_descent_method(f, gf, [-2; -2], 10000, 0.0000000001, known_minimum)
 draw_trace(points);
 figure(fig1)
