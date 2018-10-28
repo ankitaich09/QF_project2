@@ -1,6 +1,6 @@
 f = @func3;
-%gf = @numerical_gradient_func;
-gf = @analytical_gradient_func;
+gf = @numerical_gradient_func;
+gf = analytical_gradient_func(@func3gradient);
 
 [x, y] = meshgrid(-2:0.1:2);
 % all points arranged as X = [x1, ..., xn] from the meshgrid
