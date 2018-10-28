@@ -1,8 +1,8 @@
 f = @func1;
 gf = @numerical_gradient_func;
-%gf = analytical_gradient_func(@func3gradient);
+%gf = analytical_gradient_func(@func1gradient);
 hf = @numerical_hessian_func;
-%hf = analytical_hessian_func(@func3hessian);
+%hf = analytical_hessian_func(@func1hessian);
 
 x0 = ones(100,1);
 %x0 = rand(1000,1);
