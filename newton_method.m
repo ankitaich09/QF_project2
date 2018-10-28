@@ -24,7 +24,7 @@ function [errors, points] = newton_method(f, g, h, x0, maxiter, E, varargin)
         a = backtrack(f, g, p, x0);
         x1 = x0 + a*p;
 
-        if(nargin>5) current_err = norm(f(x1) - f(xstar));
+        if(nargin>6) current_err = norm(f(x1) - f(xstar));
         else         current_err = norm(f(x0) - f(x1));
         end
 
