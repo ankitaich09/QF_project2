@@ -13,7 +13,7 @@ function a = backtrack(f, g, p, x, varargin)
         a = varargin{1}; 
     end
 
-    while f(x + a*p) > f(x) + c*a*p'*g(x)
+    while f(x + a*p) > f(x) + c*a*p'*g(f, x, 4)
         a = rho*a;
     end
 end

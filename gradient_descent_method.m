@@ -18,7 +18,7 @@ function [errors, points] = gradient_descent_method(f, g, x0, maxiter, E, vararg
     while true
         i = i + 1;
 
-        p = -g(x0);
+        p = -g(f, x0, 4);
         a = backtrack(f, g, p, x0);
         x1 = x0 + a*p;
 
