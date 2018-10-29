@@ -33,6 +33,6 @@ figure
 draw_errors(errors)
 
 % Results (error, iterations):
-% x = 100 -> gdescent with xstar: x = 100 -> (9.8170e-11, 723) | x = 1 -> (9.8249e-11, 517)
+% gdescent with xstar: x = 100 -> (9.8170e-11, 723) | x = 1 -> (9.8249e-11, 517)
 % gdescent without xstar: x = 100 -> (9.7558e-11, 634) | x = 1 -> (8.3596e-11, 437)
 % newton: x = 100 -> (1.0441e-25, 1) | x = 1 -> (6.1013e-30, 1)
