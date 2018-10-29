@@ -9,7 +9,7 @@ hf = analytical_hessian_func(@func3hessian);
 X = [x(:)'; y(:)'];
 fig1 = figure
 % makes z a grid of values with size of x
-z = reshape(func3(X), size(x));
+z = reshape(f(X), size(x));
 surf(x, y, z);
 pxy = gf(f, X, 4);
 figure
