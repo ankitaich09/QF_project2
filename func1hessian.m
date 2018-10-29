@@ -3,9 +3,6 @@ function H = func1hessian(x)
 	% returns an array of matrices with the hessian for each point xi
 
     [n, m] = size(x);
-    H = zeros(n, n*m);
 
-    for i=1:n
-        H(i, :) = repmat([zeros(1, i-1), i*2, zeros(1, n - i)], 1, m)
-    end
+    H = repmat(diag((1:n) * 2), 1, m);
 end
