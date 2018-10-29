@@ -20,7 +20,9 @@ function [errors, points] = newton_method(f, g, h, x0, maxiter, E, varargin)
     while true
         i = i + 1;
 
-        p = h(f, g, x0, 4) \ -g(f, x0, 4);
+        %p = h(f, g, x0, 4) \ -g(f, x0, 4);
+        % use the Moore-Penrose pseudoinverse of the hessian
+        p = pinv( h(f, g, x0, 4)) * -g(f, x0, 4);
         a = backtrack(f, g, p, x0);
         x1 = x0 + a*p;
 
