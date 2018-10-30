@@ -7,9 +7,12 @@ function draw_errors(errors, varargin)
     end
     iterations = length(errors);
     
-    if(scale == "log") semilogy(1:iterations, errors)
-    else plot(1:iterations, errors)
+    if(scale == "log")
+        semilogy(1:iterations, errors);
+    else
+        plot(1:iterations, errors);
     end
-    title(sprintf("Error vs. Iteration\n(min err %e in %d its.)",min(errors), iterations));
-    min(errors)
+    title(sprintf("Error vs. Iteration\n(reached err %e in %d its.)",errors(iterations), iterations));
+    min_error = min(errors)
+    last_error_reached = errors(iterations)
 end
