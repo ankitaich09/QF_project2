@@ -2,16 +2,16 @@ f = func2();
 %gf = @numerical_gradient_func;
 gf = analytical_gradient_func(func2gradient());
 hf = @numerical_hessian_func;
-% hf = analytical_hessian_func(func2hessian());
+hf = analytical_hessian_func(func2hessian());
 
 num_vars = 100;
 err = 1.0e-10;
 max_iter = 10000;
 
 x0 = zeros(num_vars,1);
-% x0 = floor(100*rand(num_vars,1));
-% x0 = repmat(12345678901234567890, num_vars, 1);
-% x0 = repmat(1, num_vars, 1);
+%x0 = floor(10000*rand(num_vars,1));
+%x0 = repmat(123, num_vars, 1);
+%x0 = repmat(1, num_vars, 1);
 %known_minimum = zeros(num_vars,1);
 
 %[errors, points] = gradient_descent_method(f, gf, x0, max_iter, err, known_minimum)
